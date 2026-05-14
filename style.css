@@ -1,0 +1,401 @@
+/* ===== Reset ===== */
+*,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+ul { list-style: none; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; height: auto; }
+
+:root {
+  --brand: #004098;
+  --brand-light: #1654A9;
+  --bg-message: #CFE0FA;
+  --text-dark: #1A1A1A;
+  --text-muted: #898989;
+}
+
+html, body { width: 100%; }
+body {
+  font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
+  color: var(--text-dark);
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 500;
+}
+
+/* ===== Layout helpers ===== */
+.wrapper-1440 { max-width: 1440px; margin: 0 auto; }
+
+/* ===== Header ===== */
+.site-header {
+  width: 100%;
+  background: #fff;
+  position: relative;
+  z-index: 10;
+}
+.site-header__inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  height: 86px;
+  padding-left: 32px;
+  position: relative;
+}
+.logo img { width: 220px; height: auto; }
+.gnav {
+  margin-left: auto;
+  margin-right: 64px;
+}
+.gnav ul { display: flex; gap: 56px; }
+.gnav a {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1A1A1A;
+  letter-spacing: 0.08em;
+}
+.gnav a:hover { color: var(--brand); }
+.contact-btn {
+  background: var(--brand);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  height: 86px;
+  display: flex;
+  align-items: center;
+  padding: 0 44px;
+  letter-spacing: 0.08em;
+}
+
+/* ===== Section title (MESSAGE / BUSINESS / NEWS / RECRUITMENT) ===== */
+.section-title {
+  display: flex;
+  align-items: flex-end;
+  gap: 24px;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1;
+}
+.section-title__en {
+  font-size: 80px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  display: inline-flex;
+}
+.section-title__en .first { color: var(--brand); }
+.section-title__en .rest  { color: var(--text-muted); }
+.section-title__divider {
+  display: inline-block;
+  width: 3px;
+  height: 70px;
+  background: var(--brand);
+  transform: rotate(22deg) translateY(-4px);
+  transform-origin: center;
+  margin: 0 6px 8px 0;
+  align-self: center;
+}
+.section-title__jp {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+  letter-spacing: 0.06em;
+}
+.section-title--light .section-title__en .rest { color: rgba(255,255,255,0.55); }
+.section-title--light .section-title__en .first { color: var(--brand); }
+.section-title--light .section-title__jp { color: #fff; }
+.section-title--light .section-title__divider { background: #fff; }
+
+.section-title--center {
+  justify-content: center;
+}
+
+/* ===== Hero ===== */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 620px;
+  overflow: hidden;
+}
+.hero__image {
+  position: absolute; inset: 0;
+  background: url('assets/hero.jpg') center/cover no-repeat;
+}
+.hero__overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.18) 60%, rgba(0,0,0,0.28) 100%);
+}
+.hero__inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.hero__title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 84px;
+  color: rgba(255,255,255,0.72);
+  letter-spacing: 0.04em;
+  text-shadow: 0 2px 14px rgba(0,0,0,0.18);
+  margin-top: -10px;
+}
+.hero__sub {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 500;
+  margin-top: 18px;
+  letter-spacing: 0.16em;
+}
+.hero__sub .line {
+  display: inline-block;
+  width: 60px;
+  height: 1px;
+  background: #fff;
+}
+
+/* ===== Primary button ===== */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--brand);
+  color: #fff;
+  width: 220px;
+  height: 56px;
+  padding: 0 24px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+.btn-primary svg { width: 24px; height: 24px; }
+.btn-primary:hover { background: #003277; }
+
+/* ===== MESSAGE section ===== */
+.message {
+  background: var(--bg-message);
+  padding: 96px 0 96px;
+}
+.message__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 60px;
+  align-items: flex-start;
+  padding: 0 32px;
+}
+.message__left { padding-top: 20px; }
+.message__body {
+  margin-top: 56px;
+  font-size: 15px;
+  line-height: 2.1;
+  color: var(--text-dark);
+  letter-spacing: 0.04em;
+}
+.message__left .btn-primary { margin-top: 56px; }
+.message__right img {
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 5/4;
+}
+
+/* ===== BUSINESS section ===== */
+.business {
+  position: relative;
+  padding: 110px 0 100px;
+  color: #fff;
+  overflow: hidden;
+}
+.business__bg {
+  position: absolute; inset: 0;
+  background: url('assets/business.jpg') center/cover no-repeat;
+}
+.business__overlay {
+  position: absolute; inset: 0;
+  background: rgba(8, 50, 120, 0.55);
+}
+.business__inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.business__lead {
+  margin-top: 48px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.7;
+  letter-spacing: 0.04em;
+}
+.business__body {
+  margin-top: 28px;
+  font-size: 15px;
+  line-height: 2.1;
+  color: rgba(255,255,255,0.92);
+  letter-spacing: 0.04em;
+}
+.business .btn-primary { margin-top: 40px; }
+
+/* ===== NEWS section ===== */
+.news {
+  background: #fff;
+  padding: 100px 0 110px;
+}
+.news__inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.news .section-title { justify-content: center; }
+.news-list { margin-top: 60px; }
+.news-list li a {
+  display: grid;
+  grid-template-columns: 130px 1fr 32px;
+  align-items: center;
+  gap: 28px;
+  padding: 18px 12px;
+  border-top: 1px solid #B7CDE8;
+  font-size: 15px;
+  color: var(--text-dark);
+}
+.news-list li:last-child a { border-bottom: 1px solid #B7CDE8; }
+.news-date {
+  background: var(--brand);
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  text-align: center;
+  padding: 6px 0;
+  letter-spacing: 0.05em;
+}
+.news-text {
+  font-size: 15px;
+  letter-spacing: 0.04em;
+}
+.news-arrow {
+  font-size: 18px;
+  color: var(--text-dark);
+  text-align: right;
+}
+
+/* ===== RECRUITMENT section ===== */
+.recruit {
+  position: relative;
+  padding: 110px 0 120px;
+  color: #fff;
+  overflow: hidden;
+}
+.recruit__bg {
+  position: absolute; inset: 0;
+  background: url('assets/recruit.jpg') center/cover no-repeat;
+}
+.recruit__overlay {
+  position: absolute; inset: 0;
+  background: rgba(8, 50, 120, 0.45);
+}
+.recruit__inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.recruit__body {
+  margin-top: 48px;
+  font-size: 15px;
+  line-height: 2.1;
+  color: rgba(255,255,255,0.95);
+  letter-spacing: 0.04em;
+}
+.recruit .btn-primary { margin-top: 40px; }
+
+/* ===== Page top ===== */
+.page-top {
+  display: block;
+  text-align: center;
+  background: var(--brand);
+  color: #fff;
+  height: 28px;
+  line-height: 28px;
+  font-size: 14px;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  background: var(--brand-light);
+  color: #fff;
+  padding: 56px 0 28px;
+}
+.site-footer__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 48px;
+  padding: 0 32px;
+  position: relative;
+}
+.site-footer__left { }
+.footer-logo {
+  width: 200px;
+  height: auto;
+  margin-bottom: 24px;
+  /* The png logo is dark; invert to white for footer */
+  filter: brightness(0) invert(1);
+}
+.company-name {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 28px;
+  letter-spacing: 0.04em;
+}
+.company-addr, .company-tel {
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  line-height: 1.8;
+}
+.site-footer__right {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+.fcol h4 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  letter-spacing: 0.04em;
+}
+.fcol ul li {
+  font-size: 13px;
+  line-height: 2.4;
+  letter-spacing: 0.04em;
+  opacity: 0.92;
+}
+.privacy {
+  position: absolute;
+  right: 32px;
+  bottom: -16px;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+.copyright {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 56px;
+  letter-spacing: 0.04em;
+  opacity: 0.95;
+}
