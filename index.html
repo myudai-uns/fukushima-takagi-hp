@@ -2,210 +2,145 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=1440">
 <title>株式会社 福島高木</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Montserrat:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="site-header">
-  <div class="site-header__inner">
-    <a href="#" class="logo">
-      <img src="assets/logo.png" alt="FUKUSHIMA TAKAGI">
-    </a>
-    <nav class="gnav">
-      <ul>
-        <li><a href="#">ホーム</a></li>
-        <li><a href="#">会社概要</a></li>
-        <li><a href="#">事業案内</a></li>
-        <li><a href="#">採用情報</a></li>
-      </ul>
+<div class="page">
+
+  <!-- ===== Header (y=0-80) ===== -->
+  <header class="hd">
+    <img class="hd__logo" src="assets/logo.png" alt="FUKUSHIMA TAKAGI">
+    <nav class="hd__nav">
+      <a href="#" style="left:904.5px;">ホーム</a>
+      <a href="#" style="left:983.5px;">会社概要</a>
+      <a href="#" style="left:1075.5px;">事業案内</a>
+      <a href="#" style="left:1167.5px;">採用情報</a>
     </nav>
-    <a href="#" class="contact-btn">お問い合わせ</a>
-  </div>
-</header>
+    <a href="#" class="hd__contact">お問い合わせ</a>
+  </header>
 
-<section class="hero">
-  <div class="hero__image"></div>
-  <div class="hero__overlay"></div>
-  <div class="hero__inner">
+  <!-- ===== Hero (y=80-740, h=660) ===== -->
+  <section class="hero">
+    <img class="hero__img" src="assets/hero.jpg" alt="">
     <h1 class="hero__title">CREATE OUR FANS</h1>
-    <p class="hero__sub"><span class="line"></span>すべてはお客様の視点から</p>
-  </div>
-</section>
+    <p class="hero__sub">すべてはお客様の視点から</p>
+  </section>
 
-<section class="message">
-  <div class="message__inner">
-    <div class="message__left">
-      <h2 class="section-title">
-        <span class="section-title__en"><span class="first">M</span><span class="rest">ESSAGE</span></span>
-        <span class="section-title__divider"></span>
-        <span class="section-title__jp">ファンを創る</span>
-      </h2>
-      <p class="message__body">
-        2018年に高木グループの東日本エリアの拠点として会社を<br>
-        設立しました。2019年6月に福島県郡山市の西部第１工業<br>
-        団地に工場を開設して以来、高品質な製品をスピーディ且<br>
-        つ安定的にお客様へ供給してまいりました。これからも、<br>
-        福島の地に根ざして、お客様と地域のみなさんと共に発展<br>
-        してまいります。
-      </p>
-      <a href="#" class="btn-primary">
-        <span>会社概要</span>
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12h14M13 6l6 6-6 6" stroke="#fff" stroke-width="1.6" stroke-linecap="square"/></svg>
-      </a>
-    </div>
-    <div class="message__right">
-      <img src="assets/message.jpg" alt="">
-    </div>
-  </div>
-</section>
-
-<section class="business">
-  <div class="business__bg"></div>
-  <div class="business__overlay"></div>
-  <div class="business__inner">
-    <h2 class="section-title section-title--light">
-      <span class="section-title__en"><span class="first">B</span><span class="rest">USINESS</span></span>
-      <span class="section-title__divider"></span>
-      <span class="section-title__jp">事業案内</span>
+  <!-- ===== MESSAGE (y=740-1425) ===== -->
+  <section class="sec sec-message">
+    <img class="sec-message__photo" src="assets/message.jpg" alt="">
+    <h2 class="title">
+      <span class="title__en"><i>M</i>ESSAGE</span>
+      <svg class="title__slash" viewBox="0 0 82 82" preserveAspectRatio="none"><line x1="0" y1="82" x2="82" y2="0" stroke="#004098" stroke-width="2"/></svg>
+      <span class="title__jp">ファンを創る</span>
     </h2>
-    <p class="business__lead">
-      髙木グループの東日本エリア拠点として、<br>
-      様々な部品を製造
-    </p>
-    <p class="business__body">
-      名古屋市に本社を持つ自動車用部品製造メーカーである株式会社高木製作所。その東日本エリア<br>
-      の拠点として、高品質な製品をスピーディに安定的に供給しています。
-    </p>
-    <a href="#" class="btn-primary">
-      <span>事業案内</span>
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12h14M13 6l6 6-6 6" stroke="#fff" stroke-width="1.6" stroke-linecap="square"/></svg>
+    <p class="sec-message__body">2018年に高木グループの東日本エリアの拠点として会社を設立しました。2019年6月に福島県郡山市の西部第１工業団地に工場を開設して以来、高品質な製品をスピーディ且つ安定的にお客様へ供給してまいりました。これからも、福島の地に根ざして、お客様と地域のみなさんと共に発展してまいります。</p>
+    <a href="#" class="btn btn-blue" style="left:93px;top:531px;">
+      <span>会社概要</span>
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 12h15M13 5l7 7-7 7" stroke="#fff" stroke-width="1.6" fill="none"/></svg>
     </a>
-  </div>
-</section>
+  </section>
 
-<section class="news">
-  <div class="news__inner">
-    <h2 class="section-title section-title--center">
-      <span class="section-title__en"><span class="first">N</span><span class="rest">EWS</span></span>
-      <span class="section-title__divider"></span>
-      <span class="section-title__jp">お知らせ</span>
+  <!-- ===== BUSINESS (y=1425-2042) ===== -->
+  <section class="sec sec-business">
+    <img class="sec-business__bg" src="assets/business.jpg" alt="">
+    <div class="sec-business__overlay"></div>
+    <h2 class="title title--on-image">
+      <span class="title__en"><i>B</i>USINESS</span>
+      <svg class="title__slash" viewBox="0 0 82 82" preserveAspectRatio="none"><line x1="0" y1="82" x2="82" y2="0" stroke="#004098" stroke-width="2"/></svg>
+      <span class="title__jp title__jp--white">事業案内</span>
+    </h2>
+    <p class="sec-business__lead">髙木グループの東日本エリア拠点として、<br>様々な部品を製造</p>
+    <p class="sec-business__body">名古屋市に本社を持つ自動車用部品製造メーカーである株式会社高木製作所。その東日本エリアの拠点として、高品質な製品をスピーディに安定的に供給しています。</p>
+    <a href="#" class="btn btn-white" style="left:98px;top:483px;">
+      <span>事業案内</span>
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 12h15M13 5l7 7-7 7" stroke="#004098" stroke-width="1.6" fill="none"/></svg>
+    </a>
+  </section>
+
+  <!-- ===== NEWS (y=2042-2642) ===== -->
+  <section class="sec sec-news">
+    <h2 class="title title--center">
+      <span class="title__en"><i>N</i>EWS</span>
+      <svg class="title__slash" viewBox="0 0 82 82" preserveAspectRatio="none"><line x1="0" y1="82" x2="82" y2="0" stroke="#004098" stroke-width="2"/></svg>
+      <span class="title__jp">お知らせ</span>
     </h2>
     <ul class="news-list">
-      <li>
-        <a href="#">
-          <span class="news-date">2026.00.00</span>
-          <span class="news-text">この文章はダミーです。この文章はダミーです。この文章はダミーです。</span>
-          <span class="news-arrow">→</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <span class="news-date">2026.00.00</span>
-          <span class="news-text">この文章はダミーです。この文章はダミーです。この文章はダミーです。</span>
-          <span class="news-arrow">→</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <span class="news-date">2026.00.00</span>
-          <span class="news-text">この文章はダミーです。この文章はダミーです。この文章はダミーです。</span>
-          <span class="news-arrow">→</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <span class="news-date">2026.00.00</span>
-          <span class="news-text">この文章はダミーです。この文章はダミーです。この文章はダミーです。</span>
-          <span class="news-arrow">→</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <span class="news-date">2026.00.00</span>
-          <span class="news-text">この文章はダミーです。この文章はダミーです。この文章はダミーです。</span>
-          <span class="news-arrow">→</span>
-        </a>
-      </li>
+      <li style="top:283px;"><span class="pill">2026.00.00</span><span class="news-txt">この文章はダミーです。この文章はダミーです。この文章はダミーです。</span><span class="news-arrow"></span></li>
+      <li style="top:329px;"><span class="pill">2026.00.00</span><span class="news-txt">この文章はダミーです。この文章はダミーです。この文章はダミーです。</span><span class="news-arrow"></span></li>
+      <li style="top:375px;"><span class="pill">2026.00.00</span><span class="news-txt">この文章はダミーです。この文章はダミーです。この文章はダミーです。</span><span class="news-arrow"></span></li>
+      <li style="top:421px;"><span class="pill">2026.00.00</span><span class="news-txt">この文章はダミーです。この文章はダミーです。この文章はダミーです。</span><span class="news-arrow"></span></li>
+      <li style="top:467px;"><span class="pill">2026.00.00</span><span class="news-txt">この文章はダミーです。この文章はダミーです。この文章はダミーです。</span><span class="news-arrow"></span></li>
     </ul>
-  </div>
-</section>
+  </section>
 
-<section class="recruit">
-  <div class="recruit__bg"></div>
-  <div class="recruit__overlay"></div>
-  <div class="recruit__inner">
-    <h2 class="section-title section-title--light">
-      <span class="section-title__en"><span class="first">R</span><span class="rest">ECRUITMENT</span></span>
-      <span class="section-title__divider"></span>
-      <span class="section-title__jp">採用情報</span>
+  <!-- ===== RECRUITMENT (y=2642-3206) ===== -->
+  <section class="sec sec-recruit">
+    <img class="sec-recruit__bg" src="assets/recruit.jpg" alt="">
+    <div class="sec-recruit__overlay"></div>
+    <h2 class="title title--on-image">
+      <span class="title__en"><i>R</i>ECRUITMENT</span>
+      <svg class="title__slash" viewBox="0 0 82 82" preserveAspectRatio="none"><line x1="0" y1="82" x2="82" y2="0" stroke="#004098" stroke-width="2"/></svg>
+      <span class="title__jp title__jp--white">採用情報</span>
     </h2>
-    <p class="recruit__body">
-      私たちは自動車用小物部品の製造メーカーです。作る製品は手のひらサイズで小さなものです<br>
-      が、車両の中でモノとモノをつなぐ大事な役割をもっています。モノづくりを通して人と<br>
-      人との繋がりを大切にし、相手のことを思える人材を大切にしたいと思っています。
-    </p>
-    <a href="#" class="btn-primary">
+    <p class="sec-recruit__body">私たちは自動車用小物部品の製造メーカーです。作る製品は手のひらサイズで小さなものですが、車両の中でモノとモノをつなぐ大事な役割をもっています。モノづくりを通して人と人との繋がりを大切にし、相手のことを思える人材を大切にしたいと思っています。</p>
+    <a href="#" class="btn btn-blue" style="left:98px;top:410px;">
       <span>採用情報</span>
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12h14M13 6l6 6-6 6" stroke="#fff" stroke-width="1.6" stroke-linecap="square"/></svg>
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 12h15M13 5l7 7-7 7" stroke="#fff" stroke-width="1.6" fill="none"/></svg>
     </a>
-  </div>
-</section>
+  </section>
 
-<a href="#top" class="page-top">^</a>
-
-<footer class="site-footer">
-  <div class="site-footer__inner">
-    <div class="site-footer__left">
-      <img class="footer-logo" src="assets/logo-white.png" alt="FUKUSHIMA TAKAGI">
-      <p class="company-name">株式会社 福島高木</p>
-      <p class="company-addr">〒984-0014 福島県郡山市上伊豆島1丁目24</p>
-      <p class="company-tel">TEL:024-973-7833 FAX:024-973-7834</p>
-    </div>
-    <div class="site-footer__right">
-      <div class="fcol">
-        <h4>会社概要</h4>
-        <ul>
-          <li>代表メッセージ</li>
-          <li>企業理念</li>
-          <li>会社案内</li>
-          <li>アクセス</li>
-        </ul>
-      </div>
-      <div class="fcol">
-        <h4>事業案内</h4>
-        <ul>
-          <li>東北高木の特徴</li>
-          <li>当社の製品</li>
-          <li>会社案内</li>
-          <li>アクセス</li>
-        </ul>
-      </div>
-      <div class="fcol">
-        <h4>採用情報</h4>
-        <ul>
-          <li>求める人材像</li>
-          <li>仕事紹介</li>
-          <li>社員紹介</li>
-          <li>福利厚生</li>
-        </ul>
-      </div>
-      <div class="fcol">
-        <h4>募集要項</h4>
-        <ul>
-          <li>応募フォーム</li>
-          <li>仕事紹介</li>
-        </ul>
-      </div>
-    </div>
-    <p class="privacy">プライバシーポリシー</p>
+  <!-- ===== Page-top bar (y=3206-3236) ===== -->
+  <div class="pagetop">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 14l6-6 6 6" stroke="#004098" stroke-width="2" fill="none" stroke-linecap="square"/></svg>
   </div>
-  <p class="copyright">Copyright © 2026 FUKUSHIMA TAKAGI.Co,.Ltd.</p>
-</footer>
+
+  <!-- ===== Footer (y=3236-3545) ===== -->
+  <footer class="ft">
+    <img class="ft__logo" src="assets/logo.png" alt="">
+    <p class="ft__company">株式会社 福島高木</p>
+    <p class="ft__addr">〒984-1311 福島県郡山市上伊豆島1丁目24<br>TEL:024-973-7833 FAX:024-973-7834</p>
+
+    <div class="ft__col" style="left:915px;">
+      <h4>会社概要</h4>
+      <a>代表メッセージ</a>
+      <a>企業理念</a>
+      <a>会社案内</a>
+      <a>アクセス</a>
+    </div>
+    <div class="ft__col" style="left:1041px;">
+      <h4>事業案内</h4>
+      <a>東北高木の特徴</a>
+      <a>当社の製品</a>
+      <a>会社案内</a>
+      <a>アクセス</a>
+    </div>
+    <div class="ft__col" style="left:1168px;">
+      <h4>採用情報</h4>
+      <a>求める人材像</a>
+      <a>仕事紹介</a>
+      <a>社員紹介</a>
+      <a>福利厚生</a>
+    </div>
+    <div class="ft__col" style="left:1294px;">
+      <h4>募集要項</h4>
+      <a>応募フォーム</a>
+      <a>仕事紹介</a>
+    </div>
+
+    <a href="#" class="ft__privacy">プライバシーポリシー</a>
+  </footer>
+
+  <!-- ===== Copyright (y=3545-3575) ===== -->
+  <div class="copyright">Copyright © 2026 FUKUSHIMA TAKAGI.Co,.Ltd.</div>
+
+</div>
 
 </body>
 </html>
