@@ -27,13 +27,13 @@
   mix-blend-mode: multiply;
 }
 
-/* Page-hero title (e.g., "COMPANY") - 50% style: 80px Montserrat Bold, blue first letter, rest white */
+/* Page-hero title (e.g., "COMPANY") - 80px Montserrat Bold, ALL white */
 .page-hero .title { z-index: 2; }
 .page-hero .title__en {
   font-size: 80px;
   color: #fff;
 }
-.page-hero .title__en i { color: #004098; }
+.page-hero .title__en i { color: #fff; }
 .page-hero .title__jp { color: #fff; }
 
 /* Content bg */
@@ -90,7 +90,7 @@
   font-weight: 500;
 }
 
-/* Philosophy rows */
+/* Philosophy rows — number box sits on the line (line is full width behind/under it) */
 .philosophy-list {
   position: relative;
 }
@@ -102,7 +102,7 @@
 }
 .philosophy-num {
   position: absolute;
-  left: 1px;
+  left: 0;
   top: 8px;
   width: 32px;
   height: 32px;
@@ -110,14 +110,15 @@
   color: #fff;
   font-family: 'Inter', sans-serif;
   font-weight: 500;
-  font-size: 28px;
+  font-size: 22px;
   line-height: 32px;
   text-align: center;
-  letter-spacing: 0.05em;
+  letter-spacing: 0;
+  z-index: 2;
 }
 .philosophy-text {
   position: absolute;
-  left: 39px;
+  left: 45px;
   top: 0;
   height: 43px;
   font-family: 'Noto Sans JP', sans-serif;
@@ -130,62 +131,70 @@
 }
 .philosophy-line {
   position: absolute;
-  left: 1px;
-  bottom: -3px;
-  width: 608px;
+  left: 0;       /* line starts at the LEFT EDGE of the number box (passes under it) */
+  top: 40px;     /* meets the bottom of the number box (number top:8 + height:32 = 40) */
+  width: 609px;
   height: 1px;
   background: #004098;
+  z-index: 1;
 }
 
-/* INFORMATION table */
+/* INFORMATION table — row gap + col gap, first col REGULAR (not bold) */
 .info-table {
   position: absolute;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 4px 5px;   /* col gap, row gap */
   font-family: 'Noto Sans JP', sans-serif;
 }
 .info-table tr {
-  height: 30px;
   background: transparent;
 }
 .info-table__label {
   width: 156px;
+  height: 30px;
   background: #004098;
   color: #fff;
-  font-weight: 500;
+  font-weight: 400;          /* NOT bold */
   font-size: 15px;
   line-height: 30px;
   letter-spacing: 0.02em;
   text-align: center;
   vertical-align: middle;
   padding: 0;
-  border: 1px solid transparent;
 }
 .info-table__val {
   width: 627px;
   background: #fff;
   color: #000;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 15px;
   line-height: 30px;
-  letter-spacing: 0.15em;
-  padding-left: 20px;
+  letter-spacing: 0.08em;
+  padding-left: 24px;
   vertical-align: middle;
-  border: 1px solid transparent;
 }
-.info-table__tall {
+.info-table__tall .info-table__label {
   height: 60px;
 }
 .info-table__tall .info-table__val {
-  line-height: 19px;
-  padding-top: 11px;
-  vertical-align: top;
-  padding-bottom: 11px;
+  height: 60px;
+  line-height: 22px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  vertical-align: middle;
 }
 
 .access-map {
   position: absolute;
   border-radius: 20px;
   object-fit: cover;
+}
+.access-addr {
+  position: absolute;
+  margin: 0;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 500;
+  white-space: nowrap;
 }
 
 /* Business page: feature/product cards */

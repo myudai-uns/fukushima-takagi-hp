@@ -476,12 +476,13 @@ body {
   position: absolute;
   left: 71px;
   top: 207px;      /* (3443-3236) */
-  width: 320px;
+  width: 480px;     /* wide enough for 〒xxx-xxxx 福島県郡山市上伊豆島一丁目24番地 to fit on one line */
   font-weight: 400;
   font-size: 15px;
-  line-height: 18px;
+  line-height: 22px;
   letter-spacing: 0.07em;
   color: #fff;
+  white-space: nowrap;
 }
 .ft__col {
   position: absolute;
