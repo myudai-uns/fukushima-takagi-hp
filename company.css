@@ -1,0 +1,276 @@
+/* ===== Company page (002_会社概要) overrides ===== */
+
+.page--company {
+  height: 3500px;
+}
+
+/* Company-page header has different x positions (nav starts earlier) */
+.page--company .hd__logo { left: 20px; }
+/* nav items use inline left from HTML */
+
+/* Page hero (white frame with image bg + blue 0.4 multiply overlay) */
+.page-hero {
+  position: absolute;
+  left: 0; top: 80px;
+  width: 1440px; height: 300px;
+  overflow: hidden;
+}
+.page-hero__bg {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.page-hero__overlay {
+  position: absolute; inset: 0;
+  background: rgb(19, 92, 193);
+  opacity: 0.4;
+  mix-blend-mode: multiply;
+}
+
+/* Page-hero title (e.g., "COMPANY") - 50% style: 80px Montserrat Bold, blue first letter, rest white */
+.page-hero .title { z-index: 2; }
+.page-hero .title__en {
+  font-size: 80px;
+  color: #fff;
+}
+.page-hero .title__en i { color: #004098; }
+.page-hero .title__jp { color: #fff; }
+
+/* Content bg */
+.content-bg {
+  position: absolute;
+  left: 0; top: 380px;
+  width: 1440px;
+  height: 2751px;
+  background: #EEF5FF;
+}
+
+/* Section subtitles (TOP MESSAGE / PHILOSOPHY / INFORMATION / ACCESS) */
+.subtitle {
+  position: absolute;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 1;
+  letter-spacing: 0;
+  margin: 0;
+}
+.subtitle__en { color: #898989; }
+.subtitle__en i { color: #004098; font-style: normal; }
+
+.subtitle--center {
+  text-align: center;
+}
+.subtitle--center .subtitle__en { display: block; text-align: center; }
+
+.subtitle__jp {
+  position: absolute;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #000;
+  text-align: center;
+  margin: 0;
+}
+
+/* Photo square placeholder */
+.photo-square {
+  position: absolute;
+  background: #d9d9d9;
+  border-radius: 20px;
+}
+
+/* Body / signature */
+.body-text, .signature {
+  position: absolute;
+  margin: 0;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 500;
+}
+
+/* Philosophy rows */
+.philosophy-list {
+  position: relative;
+}
+.philosophy-row {
+  position: absolute;
+  left: 416px;
+  width: 609px;
+  height: 43px;
+}
+.philosophy-num {
+  position: absolute;
+  left: 1px;
+  top: 8px;
+  width: 32px;
+  height: 32px;
+  background: #004098;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 32px;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+.philosophy-text {
+  position: absolute;
+  left: 39px;
+  top: 0;
+  height: 43px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 43px;
+  letter-spacing: 0;
+  color: #000;
+  white-space: nowrap;
+}
+.philosophy-line {
+  position: absolute;
+  left: 1px;
+  bottom: -3px;
+  width: 608px;
+  height: 1px;
+  background: #004098;
+}
+
+/* INFORMATION table */
+.info-table {
+  position: absolute;
+  border-collapse: collapse;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.info-table tr {
+  height: 30px;
+  background: transparent;
+}
+.info-table__label {
+  width: 156px;
+  background: #004098;
+  color: #fff;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 30px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0;
+  border: 1px solid transparent;
+}
+.info-table__val {
+  width: 627px;
+  background: #fff;
+  color: #000;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 30px;
+  letter-spacing: 0.15em;
+  padding-left: 20px;
+  vertical-align: middle;
+  border: 1px solid transparent;
+}
+.info-table__tall {
+  height: 60px;
+}
+.info-table__tall .info-table__val {
+  line-height: 19px;
+  padding-top: 11px;
+  vertical-align: top;
+  padding-bottom: 11px;
+}
+
+.access-map {
+  position: absolute;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* Business page: feature/product cards */
+.biz-arrow {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: #004098;
+  border-radius: 50%;
+  z-index: 5;
+}
+.biz-arrow::after {
+  content: "";
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  width: 14px;
+  height: 14px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+}
+.biz-arrow--left::after {
+  transform: translate(-30%, -50%) rotate(-135deg);
+}
+.biz-arrow--right::after {
+  transform: translate(-70%, -50%) rotate(45deg);
+}
+
+.feature-card {
+  position: absolute;
+  width: 302.7px;
+  height: 403px;
+}
+.feature-card__img {
+  width: 302.7px;
+  height: 287px;
+  background: #d9d9d9;
+  border-radius: 20px;
+}
+.feature-card__name {
+  margin-top: 13px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0.02em;
+  color: #000;
+}
+.feature-card__desc {
+  margin-top: 13px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  color: #000;
+}
+
+/* Product grid (MERCHANDISE) */
+.product-card {
+  position: absolute;
+  width: 302.7px;
+  height: 400px;
+}
+.product-card__img {
+  width: 302.7px;
+  height: 287px;
+  background: #d9d9d9;
+  border-radius: 20px;
+}
+.product-card__name {
+  margin-top: 13px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0.02em;
+  color: #000;
+}
+.product-card__desc {
+  margin-top: 13px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  color: #000;
+}

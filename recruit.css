@@ -1,0 +1,236 @@
+/* ===== Recruit page extra styles ===== */
+.recruit-tagline {
+  position: absolute;
+  margin: 0;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 80px;
+  letter-spacing: 0;
+  color: #fff;
+  z-index: 3;
+}
+
+/* Large workers photo with blue overlay box */
+.recruit-photo-block {
+  position: absolute;
+  left: 120px;
+  width: 1200px;
+  height: 904px;
+}
+.recruit-photo-block__img {
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.recruit-photo-block__box {
+  position: absolute;
+  left: 100px;
+  top: 118px;
+  width: 1000px;
+  height: 499px;
+  background: rgba(0, 64, 152, 0.85);
+  border-radius: 20px;
+}
+
+/* Job columns (3 sections side-by-side, h=480 each, w=480 each) */
+.job-col {
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  overflow: hidden;
+}
+.job-col__bg {
+  position: absolute;
+  inset: 0;
+  background: #d9d9d9; /* placeholder */
+  background-image: url('assets/recruit-job.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.job-col__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgb(19, 92, 193);
+  opacity: 0.4;
+  mix-blend-mode: multiply;
+}
+.job-col__pill {
+  position: absolute;
+  width: 400px;
+  height: 58px;
+  background: #004098;
+  border-radius: 5px;
+  color: #fff;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 58px;
+  letter-spacing: 0;
+  text-align: center;
+  z-index: 2;
+}
+.job-col__text {
+  position: absolute;
+  width: 390px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 30px;
+  letter-spacing: 0;
+  color: #fff;
+  margin: 0;
+  z-index: 2;
+}
+
+/* Staff cards */
+.staff-card {
+  position: absolute;
+  left: 0;
+  width: 1440px;
+  height: 540px;
+}
+.staff-card__photo {
+  position: absolute;
+  background: #d9d9d9;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+}
+.staff-card__photo--right {
+  background-image: url('assets/recruit-staff1.jpg');
+}
+.staff-card__photo--left {
+  background-image: url('assets/recruit-staff2.jpg');
+}
+.staff-card__dept {
+  position: absolute;
+  margin: 0;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
+  color: #000;
+}
+.staff-card__name {
+  position: absolute;
+  margin: 0;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 30px;
+  color: #000;
+}
+.staff-card__san {
+  font-size: 22px;
+}
+.staff-card__title {
+  position: absolute;
+  margin: 0;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 40px;
+  color: #000;
+}
+.staff-card__body {
+  position: absolute;
+  margin: 0;
+  width: 563px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 30px;
+  letter-spacing: 0.02em;
+  color: #000;
+}
+
+/* Benefits grid (3x3) */
+.benefits-grid {
+  position: absolute;
+  left: 218px;
+  width: 1002px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+.benefit-cell {
+  background: #004098;
+  color: #fff;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 0.02em;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Application form */
+.form-box {
+  position: absolute;
+  left: 220px;
+  width: 1000px;
+  background: #004098;
+  color: #fff;
+  padding: 60px;
+  border-radius: 20px;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+.form-row label {
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+}
+.form-row .req {
+  display: inline-block;
+  background: #DC3545;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  margin-left: 8px;
+  border-radius: 3px;
+  vertical-align: middle;
+}
+.form-row input,
+.form-row select,
+.form-row textarea {
+  width: 100%;
+  padding: 12px 16px;
+  background: #fff;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 15px;
+}
+.form-row textarea {
+  min-height: 160px;
+  resize: vertical;
+}
+.form-row--center {
+  align-items: center;
+  margin-top: 30px;
+}
+.form-submit {
+  background: #fff;
+  color: #004098;
+  border: none;
+  padding: 18px 80px;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  border-radius: 4px;
+  cursor: pointer;
+}
