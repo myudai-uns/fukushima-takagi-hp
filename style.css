@@ -488,6 +488,17 @@ body {
   top: 70px;        /* heading at y=3306 */
   width: 91px;
 }
+.ft__col::before {
+  /* White vertical bar 1px, height 133px (75px for 4th col), at left:-10px (915-905=10, 1041-1031=10, 1168-1158=10, 1294-1284=10) */
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 0;
+  width: 1px;
+  height: 133px;
+  background: #fff;
+}
+.ft__col--short::before { height: 75px; }
 .ft__col h4 {
   font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif;
   font-weight: 600;
